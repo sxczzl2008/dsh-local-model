@@ -42,12 +42,13 @@ function installToProfile(homeDir) {
   copyDirRecursive(path.join(REPO_ROOT, 'lib'), path.join(pkgDest, 'lib'));
   copyDirRecursive(path.join(REPO_ROOT, 'scripts'), path.join(pkgDest, 'scripts'));
 
+  const selfPkg = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'package.json'), 'utf8'));
   const desktopPkgFile = path.join(desktopDir, 'package.json');
   if (fs.existsSync(desktopPkgFile)) {
     const pkg = JSON.parse(fs.readFileSync(desktopPkgFile, 'utf8'));
     pkg.dependencies = pkg.dependencies || {};
     delete pkg.dependencies['dsh-local-model-control'];
-    pkg.dependencies['dsh-local-model'] = '0.1.0';
+    pkg.dependencies['dsh-local-model'] = selfPkg.version || '0.2.0';
     pkg.dsh = pkg.dsh || {};
     pkg.dsh.profile = pkg.dsh.profile || {};
     const bundles = Array.isArray(pkg.dsh.profile.bundles) ? pkg.dsh.profile.bundles : [];
