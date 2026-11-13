@@ -1,0 +1,4 @@
+# dsh-local-model — bundle patch layer
+- insert:
+    - id: local-model-control
+      name: dsh-local-model

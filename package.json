@@ -1,0 +1,48 @@
+{
+  "name": "dsh-local-model",
+  "version": "0.1.0",
+  "description": "Strata local model controller plugin for DeepSeek Harness (DSH) — manages Huihui (18081) & SC117 (18082) parameters, VRAM-safe start/stop lifecycle, per-session model switching, and automatic environment decoupling with AI diagnostic prompts.",
+  "license": "MIT",
+  "author": "Helios <sxczzl2008@gmail.com>",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "strata",
+    "local-model",
+    "huihui",
+    "sc117",
+    "vram-control",
+    "gguf"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js",
+    "install-plugin": "node scripts/patch-host.cjs --install",
+    "uninstall-plugin": "node scripts/patch-host.cjs --uninstall"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
