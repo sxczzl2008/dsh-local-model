@@ -1,6 +1,6 @@
 {
   "name": "dsh-local-model",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Strata local model controller plugin for DeepSeek Harness (DSH) — manages Huihui (18081) & SC117 (18082) parameters, VRAM-safe start/stop lifecycle, per-session model switching, and automatic environment decoupling with AI diagnostic prompts.",
   "license": "MIT",
   "author": "Helios <sxczzl2008@gmail.com>",
@@ -46,3 +46,4 @@
     }
   }
 }
+
