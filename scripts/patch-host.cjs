@@ -3,7 +3,7 @@ const os = require('node:os');
 const path = require('node:path');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
-const DEFAULT_HOME = process.env.DSH_HOME || (fs.existsSync('E:/DSH/home/profiles/desktop') ? 'E:/DSH/home' : path.join(os.homedir(), '.dsh'));
+const DEFAULT_HOME = process.env.DSH_HOME || path.join(os.homedir(), '.dsh');
 
 function parseArgs(argv) {
   const out = { action: 'install', homeDir: DEFAULT_HOME };

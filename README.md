@@ -51,21 +51,21 @@ dsh-local-model/
 
 ### 1. 安装到正式版 DSH
 ```powershell
-pwsh -File "E:\DSH\dsh-local-model\scripts\Manage-LocalModel-Plugin.ps1" -Action Install
+pwsh -File "<plugin-dir>/scripts/Manage-LocalModel-Plugin.ps1" -Action Install
 ```
 
 ### 2. 从正式版 DSH 安全卸载
 ```powershell
-pwsh -File "E:\DSH\dsh-local-model\scripts\Manage-LocalModel-Plugin.ps1" -Action Uninstall
+pwsh -File "<plugin-dir>/scripts/Manage-LocalModel-Plugin.ps1" -Action Uninstall
 ```
 
 ### 3. 发布新版本并记录结构化日志
 ```powershell
-pwsh -File "E:\DSH\dsh-local-model\scripts\Manage-LocalModel-Plugin.ps1" -Action PublishVersion -Version "0.2.1" -Summary "简要说明本次版本改动"
+pwsh -File "<plugin-dir>/scripts/Manage-LocalModel-Plugin.ps1" -Action PublishVersion -Version "0.2.1" -Summary "简要说明本次版本改动"
 ```
 
 ### 4. 回滚至指定历史版本 Tag
 ```powershell
-pwsh -File "E:\DSH\dsh-local-model\scripts\Manage-LocalModel-Plugin.ps1" -Action RollbackVersion -TargetTag "v0.2.0"
+pwsh -File "<plugin-dir>/scripts/Manage-LocalModel-Plugin.ps1" -Action RollbackVersion -TargetTag "v0.2.0"
 ```
 
