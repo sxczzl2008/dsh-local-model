@@ -1,6 +1,6 @@
 {
   "name": "dsh-local-model",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Strata local model controller plugin for DeepSeek Harness (DSH) — automatic GGUF model discovery, native context-window inspection, VRAM-safe start/stop lifecycle, per-session model switching, and automatic environment decoupling with AI diagnostic prompts.",
   "license": "MIT",
   "author": "Helios <sxczzl2008@gmail.com>",
