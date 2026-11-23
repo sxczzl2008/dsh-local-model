@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.3] - 2026-11-24
+### 更新内容
+- **支持 Strata 原生视觉能力同步**：自动识别本地 Strata 模型配置中的 `vision` / `mmproj` 视觉投影，同步到 DSH 时自动补充 `image` 输入能力，并在设置页信息栏显示视觉运行模式（CPU / GPU）。
+- **补充公开安装说明**：整理 `README.md`，补充通过 `dsh plugin add github:sxczzl2008/dsh-local-model` 的标准安装命令，准备公开发布。
+
 ## [0.2.2] - 2026-11-14
 ### 更新内容
 - **补充本地模型凭据协调与离线校验**：加入 `provider-credentials.mjs`，启动时自动为本地 Strata 路由补齐本机占位凭据；清理测试脚本里的默认盘符路径硬编码。
